@@ -9,8 +9,8 @@ fi
 
 echo "面板密码为(默认为1234567890):"
 read passwd
-if [ -z "${user}" ];then
- user="1234567890"
+if [ -z "${passwd}" ];then
+ passwd="1234567890"
 fi
 
 cat >> v2ray_client/config.py << EOF
