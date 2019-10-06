@@ -2,9 +2,7 @@ FROM v2ray/official:latest
 WORKDIR /home/NoOne-hub/v2ray/
 COPY entrypoint.sh v2ray_client/ ./
 RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/main/" > /etc/apk/repositories \
- && echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/community" >> /etc/apk/repositories 
-RUN apk update \
- && apk upgrade
+ && echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/community" >> /etc/apk/repositories
 RUN apk update \
         && apk upgrade \
         && apk add --no-cache bash \
