@@ -14,7 +14,7 @@ RUN echo "[global]" >> ~/.pip/pip.conf \
         && echo "index-url =  http://mirrors.aliyun.com/pypi/simple/" >> ~/.pip/pip.conf \
         && echo "trusted-host = mirrors.aliyun.com" >> ~/.pip/pip.conf
 
-RUN pip3 install -r requirements.txt --no-cache
+RUN pip3 install -r ./requirements.txt --no-cache
 ENTRYPOINT ["./entrypoint.sh"]
 
 
